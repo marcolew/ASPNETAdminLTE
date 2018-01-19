@@ -1,0 +1,10 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "admin-lte": "adminlte#v2.4.2"
+  },
+  "resolutions": {
+    "jquery": "2 - 3"
+  }
+}
