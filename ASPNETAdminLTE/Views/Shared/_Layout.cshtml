@@ -260,10 +260,15 @@ desired effect
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">HEADER</li>
                     <!-- Optionally, you can add icons to the links -->
-                    @Html.ActionLinkNavigation("Home", "Index", "Home")
-                    @Html.ActionLinkNavigation("About", "About", "Home")
-                    @Html.ActionLinkNavigation("Contact", "Contact", "Home")
-                    @Html.ActionLinkNavigation("Test","Index", "Home")
+                    @Html.ActionLinkNavigation("Home", "Index", "Home", "fa-wifi")
+                    @Html.ActionLinkNavigation("About", "About", "Home", "fa-user")
+                    @Html.ActionLinkNavigation("Contact", "Contact", "Home", "fa-tree")
+                    @Html.ActionLinkNavigation("Test","Index", "Home", "fa-send")
+                    @Html.Navigation(new List<NavigationEntry>()
+               { 
+                   new NavigationEntry("Home2", "Index", "Home", "fa-server"),
+                   new NavigationEntry("Home3", "Index", "Home", "fa-share")
+               })
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-link"></i> <span>Multilevel</span>

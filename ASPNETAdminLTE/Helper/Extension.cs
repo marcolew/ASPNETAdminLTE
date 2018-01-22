@@ -12,14 +12,7 @@ namespace ASPNETAdminLTE.Helper
     public static class Extension
     {
 
-        private static string GetString(IHtmlContent content)
-        {
-            var writer = new System.IO.StringWriter();
-            content.WriteTo(writer, HtmlEncoder.Default);
-            return writer.ToString();
-        }
-
-        public static IHtmlContent ActionLinkNavigation(this IHtmlHelper htmlHelper, string linkText, string actionName, string controllerName)
+        public static IHtmlContent ActionLinkNavigation(this IHtmlHelper htmlHelper, string linkText, string actionName, string controllerName, string faIcon)
         {
             var url = String.Format("/{0}/{1}", controllerName, actionName);
             var li = new TagBuilder("li");
@@ -29,17 +22,16 @@ namespace ASPNETAdminLTE.Helper
             //a.MergeAttributes(new RouteValueDictionary(htmlAttributes));
 
             var i = new TagBuilder("i");
-            i.MergeAttribute("class", "fa fa-link");
+            i.MergeAttribute("class", String.Format("fa {0}", faIcon));
 
             var span = new TagBuilder("span");
             span.InnerHtml.Append(linkText);
 
-            a.InnerHtml.AppendHtml(GetString(i));
-            a.InnerHtml.AppendHtml(GetString(span));
-            li.InnerHtml.AppendHtml(GetString(a));
+            a.InnerHtml.AppendHtml(Common.GetString(i));
+            a.InnerHtml.AppendHtml(Common.GetString(span));
+            li.InnerHtml.AppendHtml(Common.GetString(a));
             return li;
 
-            //< li >< a href = "#" >< i class="fa fa-link"></i> <span>Another Link</span></a></li>
         }
 
 
