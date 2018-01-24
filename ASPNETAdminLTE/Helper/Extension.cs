@@ -14,7 +14,7 @@ namespace ASPNETAdminLTE.Helper
 
         public static IHtmlContent ActionLinkNavigation(this IHtmlHelper htmlHelper, string linkText, string actionName, string controllerName, string faIcon)
         {
-            var url = String.Format("/{0}/{1}", controllerName, actionName);
+            var url = Common.GetURL(actionName, controllerName);
             var li = new TagBuilder("li");
 
             var a = new TagBuilder("a");

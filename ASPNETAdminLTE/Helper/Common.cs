@@ -16,5 +16,10 @@ namespace ASPNETAdminLTE.Helper
             return writer.ToString();
         }
 
+        public static string GetURL(string actionName, string controllerName)
+        {
+            return String.Format("/{0}/{1}", controllerName, actionName);
+        }
+
     }
 }

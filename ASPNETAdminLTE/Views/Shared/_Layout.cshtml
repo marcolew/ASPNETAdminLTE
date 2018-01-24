@@ -263,13 +263,17 @@ desired effect
                     @Html.ActionLinkNavigation("Home", "Index", "Home", "fa-wifi")
                     @Html.ActionLinkNavigation("About", "About", "Home", "fa-user")
                     @Html.ActionLinkNavigation("Contact", "Contact", "Home", "fa-tree")
-                    @Html.ActionLinkNavigation("Test","Index", "Home", "fa-send")
                     @Html.Navigation(new List<NavigationEntry>()
-               { 
-                   new NavigationEntry("Home2", "Index", "Home", "fa-server"),
-                   new NavigationEntry("Home3", "Index", "Home", "fa-share")
+               {
+                   new NavigationEntry("Test1", "Index", "Home", "fa-server"),
+                   new NavigationEntry("Test2", "Index", "Home", "fa-share"),
+                   new NavigationEntry("Test3", "Index", "Home", "fa-share", new List<NavigationEntry>()
+                   {
+                   new NavigationEntry("Sub1", "Index", "Home", "fa-server"),
+                   new NavigationEntry("Sub2", "Index", "Home", "fa-share")
+                   })
                })
-                    <li class="treeview">
+                    <li class="treeview active">
                         <a href="#">
                             <i class="fa fa-link"></i> <span>Multilevel</span>
                             <span class="pull-right-container">
