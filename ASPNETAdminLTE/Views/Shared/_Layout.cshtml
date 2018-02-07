@@ -263,28 +263,18 @@ desired effect
                     @Html.ActionLinkNavigation("Home", "Index", "Home", "fa-wifi")
                     @Html.ActionLinkNavigation("About", "About", "Home", "fa-user")
                     @Html.ActionLinkNavigation("Contact", "Contact", "Home", "fa-tree")
+
+                    <li class="header">TESTS</li>
                     @Html.Navigation(new List<NavigationEntry>()
-               {
-                   new NavigationEntry("Test1", "Index", "Home", "fa-server"),
-                   new NavigationEntry("Test2", "Index", "Home", "fa-share"),
-                   new NavigationEntry("Test3", "Index", "Home", "fa-share", new List<NavigationEntry>()
-                   {
-                   new NavigationEntry("Sub1", "Index", "Home", "fa-server"),
-                   new NavigationEntry("Sub2", "Index", "Home", "fa-share")
-                   })
-               })
-                    <li class="treeview active">
-                        <a href="#">
-                            <i class="fa fa-link"></i> <span>Multilevel</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="#"><i class="fa fa-link"></i> <span>Link in level 2</span></a></li>
-                            <li><a href="#">Link in level 2</a></li>
-                        </ul>
-                    </li>
+            {
+                new NavigationEntry("Test1", "Index", "Home", "fa-server"),
+                new NavigationEntry("Test2", "Index", "Home", "fa-share"),
+                new NavigationEntry("Test3", "Index", "Home", "fa-share", new List<NavigationEntry>()
+                {
+                    new NavigationEntry("Sub1", "Index", "Home", "fa-server"),
+                    new NavigationEntry("Sub2", "Index", "Home", "fa-share")
+                })
+            })
                 </ul>
                 <!-- /.sidebar-menu -->
             </section>
