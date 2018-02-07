@@ -11,7 +11,12 @@ namespace ASPNETAdminLTE.Helper
 {
     public static class Extension
     {
-
+        public static IDisposable PanelDiv (this IHtmlHelper htmlHelper)
+        {
+            var writer = htmlHelper.ViewContext.Writer;
+            writer.WriteLine(string.Format("<div>"));
+            return new RowContainer(writer);
+        }
         public static IHtmlContent ActionLinkNavigation(this IHtmlHelper htmlHelper, string linkText, string actionName, string controllerName, string faIcon)
         {
             var url = Common.GetURL(actionName, controllerName);
