@@ -2,8 +2,22 @@
 }
 
 <p>Use this area to provide additional information.</p>
-
-@using (Html.PanelDiv())
+@using (Html.RowDiv())
 {
-    <h1>blab bla </h1>
+    @using (Html.PanelDiv("About", PanelSizeEnum.ColMd8))
+    {
+        <p>This is a test.</p>
+    }
+    @using (Html.PanelDiv("About 2", PanelSizeEnum.ColMd4))
+    {
+        <p>This is a test.</p>
+    }
+}
+
+@using (Html.RowDiv())
+{
+    @using (Html.PanelDiv("About 3", PanelSizeEnum.ColMd12))
+    {
+        <p>This is a test.</p>
+    }
 }

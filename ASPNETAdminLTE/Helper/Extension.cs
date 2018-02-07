@@ -11,10 +11,31 @@ namespace ASPNETAdminLTE.Helper
 {
     public static class Extension
     {
-        public static IDisposable PanelDiv (this IHtmlHelper htmlHelper)
+        public static IDisposable PanelDiv (this IHtmlHelper htmlHelper, string boxTitle, PanelSizeEnum size)
         {
             var writer = htmlHelper.ViewContext.Writer;
-            writer.WriteLine(string.Format("<div>"));
+
+            var str = @"<div class=""col-md-{0}"">
+              <div class=""box"">
+            <div class=""box-header with-border"">
+              <h3 class=""box-title"">{1}</h3>
+
+              <div class=""box-tools pull-right"">
+                <button type = ""button"" class=""btn btn-box-tool"" data-widget=""collapse""><i class=""fa fa-minus""></i></button>
+                <button type = ""button"" class=""btn btn-box-tool"" data-widget=""remove""><i class=""fa fa-times""></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class=""box-body"">";
+
+            writer.WriteLine(string.Format(str,(int)size, boxTitle));
+            return new PanelContainer(writer);
+        }
+
+        public static IDisposable RowDiv(this IHtmlHelper htmlHelper)
+        {
+            var writer = htmlHelper.ViewContext.Writer;
+            writer.WriteLine("<div class=\"row\">");
             return new RowContainer(writer);
         }
         public static IHtmlContent ActionLinkNavigation(this IHtmlHelper htmlHelper, string linkText, string actionName, string controllerName, string faIcon)
