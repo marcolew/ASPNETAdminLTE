@@ -2,9 +2,13 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "admin-lte": "adminlte#v2.4.2"
+    "admin-lte": "v2.4.8",
+    "jquery": "3.3.1",
+    "moment": "2.22.2"
   },
   "resolutions": {
-    "jquery": "2 - 3"
+    "jquery": "3.3.1",
+    "admin-lte": "v2.4.8",
+    "jvectormap": "^2.0.4"
   }
 }

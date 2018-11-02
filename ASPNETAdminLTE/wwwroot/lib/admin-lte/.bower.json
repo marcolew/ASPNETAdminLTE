@@ -8,7 +8,7 @@
   "main": [
     "index2.html",
     "dist/css/AdminLTE.css",
-    "dist/js/app.js",
+    "dist/js/adminlte.js",
     "build/less/AdminLTE.less"
   ],
   "keywords": [
@@ -47,7 +47,7 @@
     "fullcalendar": "^3.4.0",
     "inputmask": "jquery.inputmask#^3.3.7",
     "ion.rangeSlider": "ionrangeslider#^2.2.0",
-    "jvectormap": "^2.0.4",
+    "jvectormap": "^1.2.2",
     "jquery-knob": "^1.2.13",
     "morris.js": "^0.5.1",
     "PACE": "pace#^1.0.2",
@@ -59,14 +59,18 @@
     "Ionicons": "ionicons#^2.0.1",
     "jquery-ui": "1.11.4"
   },
-  "version": "2.4.2",
-  "_release": "2.4.2",
+  "resolutions": {
+    "jquery": "^3.2.1"
+  },
+  "version": "2.4.8",
+  "_release": "2.4.8",
   "_resolution": {
     "type": "version",
-    "tag": "v2.4.2",
-    "commit": "156f56c3c183a3b8486c47b122c7fa8819510a90"
+    "tag": "v2.4.8",
+    "commit": "77dc17e4b625eae4d453e3fa9676974cc7010e63"
   },
   "_source": "https://github.com/almasaeed2010/AdminLTE.git",
-  "_target": "v2.4.2",
-  "_originalSource": "adminlte"
+  "_target": "v2.4.8",
+  "_originalSource": "admin-lte",
+  "_direct": true
 }
