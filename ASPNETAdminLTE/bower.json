@@ -4,11 +4,27 @@
   "dependencies": {
     "admin-lte": "v2.4.8",
     "jquery": "3.3.1",
-    "moment": "2.22.2"
+    "moment": "2.22.2",
+    "jquery-validation-unobtrusive": "v3.2.11",
+    "jquery-validation": "1.18.0",
+    "mocha": "v5.2.0",
+    "jvectormap": "2.0.4",
+    "jquery-ui": "1.12.1",
+    "inputmask": "4.0.2",
+    "fullcalendar": "v3.9.0",
+    "font-awesome": "5.5.0",
+    "datatables.net": "1.10.19",
+    "chart.js": "v2.7.3"
   },
   "resolutions": {
     "jquery": "3.3.1",
     "admin-lte": "v2.4.8",
-    "jvectormap": "^2.0.4"
+    "jvectormap": "2.0.4",
+    "jquery-validation-unobtrusive": "v3.2.11",
+    "mocha": "v5.2.0",
+    "jquery-ui": "1.12.1",
+    "inputmask": "4.0.2",
+    "font-awesome": "5.5.0",
+    "chart.js": "v2.7.3"
   }
 }
